@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ name }}{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/pizza.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <section class="pizza">
+        <div class="catalog__pizza-image-box"><img class="catalog__pizza-image" src="/../images/{{ imagePath }}" alt="{{ name }}"></div>
+        <div class="catalog__pizza-data-box">
+            <h3 class="catalog__pizza-name">{{ name }}</h3></a>
+            <p class="catalog__pizza-ingregients"><b>Состав: </b>{{ ingredients }}</p>
+            <p class="catalog__pizza-ingregients"><b>Описание: </b>{{ discription }}</p>
+            <div class="catalog__pizza-price-box">
+                <p class="catalog__pizza-price">{{ price }} Руб.<p>
+                <a class="catalog__pizza-buy" href="/order_page/{{ id }}"> Заказать</a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

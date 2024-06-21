@@ -1,0 +1,110 @@
+.main {
+    background-image: url(/images/catalog.png);
+    background-size: cover;
+}
+
+.banner {
+    height: 600px;
+    position: relative;
+}
+
+.banner__title-box {
+    margin: 0 auto;
+    padding-top: 170px;
+    max-width: 1520px;
+}
+
+.banner__title {
+    font: 400 50px/51px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.banner__subtitle {
+    font: 400 28px/40px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 80px;
+}
+
+.catalog {
+    width: 1300px;
+    background-color: #fefefe;
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    position: absolute;
+    top: 470px;
+    left: 50%;
+    margin-left: -650px;
+    padding: 70px 50px;
+}
+
+.catalog__pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.catalog__pizza-list-elem {
+    width: 350px;
+    padding: 25px;
+    min-height: 0;
+}
+
+.catalog__pizza-list-elem:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+}
+
+.catalog__pizza-image-box {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.catalog__pizza-image {
+    width: 350px;
+}
+
+.catalog__pizza {
+    text-decoration: none;
+}
+
+.catalog__pizza-name {
+    font: 500 28px/40px Arial, Helvetica, sans-serif;
+    color: #070707;
+    margin-bottom: 20px;
+}
+
+.catalog__pizza-ingregients {
+    font: 400 16px / 26px Arial, Helvetica, sans-serif;
+    color: #424242;
+    margin-bottom: 50px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.catalog__pizza-price-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.catalog__pizza-price {
+    font: 500 24px / 40px Arial, Helvetica, sans-serif;
+    color: #070707;
+}
+
+.catalog__pizza-buy {
+    font: 400 24px/40px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 13px 36px 17px;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #ba5115;
+}
+
+.catalog__pizza-buy:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    background-color: #d35912;
+}

@@ -1,0 +1,26 @@
+
+{% extends "base.html.twig" %}
+{% block title %}Войти{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/login.css">
+{% endblock %}
+{% block body %}
+    <main class="main">
+        <form class="main__form" enctype="multipart/form-data" action="/login_api" method="post" id="" name="">
+            <h1 class="main__form-title">Вход</h1>
+            <div class="main__form-group">
+                <label class="main__label" for="email">Email</label>
+                <input class="main__input-control" name="email" id="email" type="text" required>
+            </div>
+            <div class="main__button-box">
+                <button class="main__form-button" type="submit">Войти</button>
+                <a class="main__form-button" href="/registration">Зарегистрироваться</a>
+            </div>
+        </form>
+
+        <div class="main__title-box">
+            <img class="main__image" src="/images/logo.svg" alt="Logo">
+            <p class="main__subtitle">Вперёд за новыми заказами!</p>
+        </div>
+    </main>
+{% endblock %}

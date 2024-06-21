@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block title %}Ошибка:({% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/error-page.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <section class="banner">
+        <h1 class="banner__title">Похоже возникла ошибка:(</h1>
+        <h2 class="banner__subtitle">{{ mess }}</h2>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,64 @@
+.main {
+    background-image: url(/images/home.jpg);
+    background-size: cover;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+
+.banner {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 200px 80px 80px;
+    background-color: #0000005e;
+    position: relative;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 40%), 4px 4px 23px rgb(0 0 0 / 5%);
+}
+
+.banner__title {
+    font: 400 100px/51px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner__subtitle {
+    font: 400 30px/40px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.banner__link-box {
+    width: 880px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+
+.banner__link {
+    padding: 13px 36px 17px;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #ba5115;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 33px;
+    display: inline-block;
+}
+
+.banner__link1:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    background-color: #d35912;
+}
+
+.banner__link2:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    background-color: #d35912;
+}

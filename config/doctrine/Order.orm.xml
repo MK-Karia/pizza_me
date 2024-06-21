@@ -1,0 +1,18 @@
+<doctrine-mapping xmlns="https://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="https://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Entity\Order" table="pizza_order">
+
+        <id name="id" type="integer" column="order_id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="userId" column="user_id" type="integer" length="200" nullable="false" />
+        <field name="pizzaId" column="pizza_id" type="integer" length="250" nullable="false" />
+        <field name="address" column="address" type="string" length="250" nullable="false" />
+        <field name="price" column="price" type="integer" nullable="false" />
+        <field name="orderDate" column="order_date" type="datetime_immutable" nullable="false" />
+    </entity>
+
+</doctrine-mapping>

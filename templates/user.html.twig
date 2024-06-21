@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ firstName }} {{ lastName }}{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/user.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <section class="user">
+        <div class="user__data-box">
+            <h1 class="user__name">{{ firstName }} {{ lastName }}</h1> 
+            <p class="user__data">Email: {{ email }}</p>
+            <p class="user__data">Номер телефона: {{ phone }}</p>
+            {% if userId == id %}
+                <div class="user__button-box">
+                    <a class="user__button user__button1" href="/update_user/{{ id }}">Изменить</a> 
+                    <a class="user__button user__button2" href="/delete_user/{{ id }}">Удалить</a>
+                </div>
+            {% endif %}
+        </div>
+        <div class="user__avatar-box">
+            {% if avatarPath != null %}
+                <img class="user__avatar" src="/../uploads/{{ avatarPath }}">
+            {% endif %}
+    </section>
+</main>
+{% endblock %}

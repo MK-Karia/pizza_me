@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+{% block title %}Сделать заказ{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/order-page.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <form class="main__form" enctype="multipart/form-data" action="/make_order" method="post" id="" name="">
+        <div class="catalog__pizza-image-box"><img class="catalog__pizza-image" src="/../images/{{ imagePath }}" alt="{{ name }}"></div>
+        <div class="catalog__pizza-data-box">
+            <h3 class="catalog__pizza-name">{{ name }}</h3></a>
+            <p class="catalog__pizza-ingregients"><b>Состав: </b>{{ ingredients }}</p>
+            <p class="catalog__pizza-ingregients"><b>Описание: </b>{{ discription }}</p>
+            <div class="main__form-group">
+                <label class="catalog__pizza-ingregients" for="address"><b>Адрес доставки: </b></label>
+                <input class="main__input-control" name="address" id="address" type="address" required>
+            </div>
+            <div class="catalog__pizza-price-box">
+                <p class="catalog__pizza-price">{{ price }} Руб.<p>
+                <input name="user_id" id="user_id" type="hidden" value="{{ userId }}">
+                <input name="pizza_id" id="pizza_id" type="hidden" value="{{ id }}">
+                <input name="price" id="price" type="hidden" value="{{ price }}">
+                <button class="main__form-button" type="submit"> Заказать</button>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

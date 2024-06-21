@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}PizzaMe!{% endblock %}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="/styles/base.css">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav-box">
+                <a class="to-home" href='/'><img class="header__logo" src="/images/logo.svg" alt="Logo"></a>
+                <ul class="nav-box__list">
+                    <li class="nav-box__item">
+                        <a class="nav-box__link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-box__item">
+                        <a class="nav-box__link" href="/catalog">Меню</a>
+                    </li>
+                    <li class="nav-box__item">
+                        <a class="nav-box__link" href="/user_list">Наши клиенты</a>
+                    </li>
+                    <li class="nav-box__item">
+                        {% if userName != null %}
+                            <a class="nav-box__link" href="/user/{{ userId }}">{{ userName }}</a><a class="nav-box__link" href="/logout">Выход</a>
+                        {% else %}    
+                            <a class="nav-box__link" href="/login">Вход</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        {% block body %}{% endblock %}
+    </body>
+</html>

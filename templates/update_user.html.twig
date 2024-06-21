@@ -1,0 +1,41 @@
+{# <html xmlns="http://www.w3.org/1999/xhtml"> #}
+
+{% extends "base.html.twig" %}
+{% block title %}Редактирование профиля{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/update-user.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <section class="user">
+        <form class="main__form" enctype="multipart/form-data" action="/update_user/{{ id }}" method="post" id="" name="">
+            <h1 class="main__form-title">Редактирование профиля</h1>
+            <input name="user_id" id="user_id" type="hidden" value="{{ id }}">
+            <div class="main__form-group">
+                <label class="main__label" for="first_name">Имя</label>
+                <input class="main__input-control" name="first_name" id="first_name" type="text" value="{{ firstName }}" required>
+            </div>
+            <div class="main__form-group">
+                <label class="main__label" for="last_name">Фамилия</label>
+                <input class="main__input-control" name="last_name" id="last_name" type="text" value="{{ lastName }}" required>
+            </div>
+            <div class="main__form-group">
+                <label class="main__label" for="email">Email</label>
+                <input class="main__input-control" name="email" id="email" type="text" value="{{ email }}" required>
+            </div>
+            <div class="main__form-group">
+                <label class="main__label" for="phone">Номер телефона (необязательное поле)</label>
+                <input class="main__input-control" name="phone" id="phone" type="text" value="{{ phone }}">
+            </div>
+            <div class="main__form-group">
+                <label class="main__label" for="avatar_path">Ваш аватар (необязательное поле)</label>
+                <input class="main__input-control" name="avatar_path" id="avatar_path" type="file" accept="image/png, image/jpeg, image/gif">
+            </div>
+            <div class="main__button-box">
+                <button class="main__form-button" type="submit">Обновить</button>
+                <a class="main__form-button" href="/user/{{ id }}">Назад</a> 
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}

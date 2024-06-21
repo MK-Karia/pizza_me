@@ -1,0 +1,78 @@
+index:
+    path: /
+    controller: App\Controller\StorefrontController::index
+    methods: GET
+
+registration:
+    path: /registration
+    controller: App\Controller\StorefrontController::registration
+    methods: GET
+
+login:
+    path: /login
+    controller: App\Controller\StorefrontController::login
+    methods: GET    
+
+login_api:
+    path: /login_api
+    controller: App\Controller\UserController::loginApi
+    methods: POST 
+
+logout:
+    path: /logout
+    controller: App\Controller\UserController::logout
+    methods: GET
+
+catalog:
+    path: /catalog
+    controller: App\Controller\StorefrontController::catalog
+    methods: GET
+
+register_user:
+    path: /register_user
+    controller: App\Controller\UserController::registerUser
+    methods: POST
+
+user:
+    path: /user/{userId}
+    controller: App\Controller\UserController::viewUser
+    methods: GET
+
+pizza:
+    path: /pizza/{pizzaId}
+    controller: App\Controller\PizzaController::viewPizza
+    methods: GET
+
+order_page:
+    path: /order_page/{pizzaId}
+    controller: App\Controller\OrderController::orderPage
+    methods: GET
+
+thanks_page:
+    path: /thanks_page
+    controller: App\Controller\StorefrontController::thanksPage
+    methods: GET
+
+make_order:
+    path: /make_order
+    controller: App\Controller\OrderController::makeOrder
+    methods: POST
+
+update_user:
+    path: /update_user/{userId}
+    controller: App\Controller\UserController::updateUser
+
+delete_user:
+    path: /delete_user/{userId}
+    controller: App\Controller\UserController::deleteUser
+    methods: GET
+
+user_list:
+    path: /user_list
+    controller: App\Controller\StorefrontController::userList
+    methods: GET
+
+error_page:
+    path: /error_page/{mess}
+    controller: App\Controller\StorefrontController::errorPage
+    methods: GET

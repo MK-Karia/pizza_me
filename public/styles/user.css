@@ -1,0 +1,79 @@
+.main {
+    background-image: url(/images/user-list.jpeg);
+    background-size: cover;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user {
+    width: 1000px;
+    background-color: #fefefe;
+    padding: 80px;
+    margin: 160px auto 0;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 40%), 4px 4px 23px rgb(0 0 0 / 5%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.user__data-box {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 550px;
+}
+
+.user__name {
+    font: 400 56px / 56px Arial, Helvetica, sans-serif;
+    margin: 10px 0 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user__data {
+    font: 400 36px / 26px Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.user__button-box {
+    margin: 190px 0 30px;
+}
+
+.user__button {
+    padding: 22px 34px 22px 34px;
+    border: 0;
+    border-radius: 3px 3px 3px 3px;
+    color: #ffffff;
+    background-color: #ba5115;
+    font: 400 22px/24px Arial;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.user__button1:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    background-color: #d35912;
+}
+
+.user__button2:hover {
+    box-shadow: 1px 1px 8px rgba(119, 119, 119, 0.4), 4px 4px 23px rgba(136, 136, 136, 0.05);
+    background-color: #d35912;
+}
+
+.user__avatar-box {
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    background-color: #868686;
+    overflow: hidden;
+    
+}
+
+.user__avatar {
+    height: 400px;
+    background-size: cover;
+}

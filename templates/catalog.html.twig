@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+{% block title %}Каталог{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/catalog.css">
+{% endblock %}
+{% block body %}
+<main class="main">
+    <section class="banner">
+        <div class="banner__title-box">
+            <h1 class="banner__title">Меню пиццы 🍕</h1>
+            <h2 class="banner__subtitle">Вы можете выбрать пиццу по своему вкусу, <br>учитывая предпочтения всех членов семьи или компании:)</h2>
+        </div>        
+    </section>
+    <section class="catalog">
+        <div class="catalog__pizza-list">
+            {% for pizza in pizzaList %}
+                <div class="catalog__pizza-list-elem">
+                    <a class="catalog__pizza" href="/pizza/{{ pizza.id }}">
+                        <div class="catalog__pizza-image-box"><img class="catalog__pizza-image" src="/../images/{{ pizza.imagePath }}" alt="{{ pizza.name }}"></div>
+                    </a>
+                    <a class="catalog__pizza" href="/pizza/{{ pizza.id }}"><h3 class="catalog__pizza-name">{{ pizza.name }}</h3></a>
+                    <div class="catalog__pizza-ingregients-box"><p class="catalog__pizza-ingregients">{{ pizza.ingredients }}</p></div>
+                    <div class="catalog__pizza-price-box">
+                        <p class="catalog__pizza-price">{{ pizza.price }} Руб.<p>
+                        <a class="catalog__pizza-buy" href="/order_page/{{ pizza.id }}"> Заказать</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>   
+{% endblock %}

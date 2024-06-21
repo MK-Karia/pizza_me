@@ -1,0 +1,35 @@
+.main {
+    background-image: url(/images/catalog.png);
+    background-size: cover;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+
+.banner {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 200px 80px 80px;
+    background-color: #0000005e;
+    position: relative;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 40%), 4px 4px 23px rgb(0 0 0 / 5%);
+}
+
+.banner__title {
+    font: 400 100px/101px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner__subtitle {
+    font: 400 30px/40px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 80px;
+    text-align: center;
+}

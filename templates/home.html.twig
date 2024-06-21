@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/styles/home.css">
+{% endblock %}
+
+{% block body %}
+<main class="main">
+    <section class="banner">
+        <h1 class="banner__title">Pizza Me!</h1>
+        <h2 class="banner__subtitle">Услуга доставки пиццы предлагает удобство, быстроту, широкий выбор, качество и свежесть 
+        блюда, что делает её привлекательным вариантом для тех, кто ценит комфорт и вкус. Наслаждайтесь вкусной пиццей, не выходя из дома! 🍕</h2>
+        <div class="banner__link-box">
+            <a class="banner__link banner__link1" href="/catalog">Перейти к выбору!</a>
+            <a class="banner__link banner__link2" href="/registration">Зарегистрироваться</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,54 @@
+.main {
+    background-image: url(/images/user-list.jpeg);
+    background-size: cover;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    width: 1000px;
+    background-color: #0000005e;
+    padding: 80px;
+    margin: 160px auto 0;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 40%), 4px 4px 23px rgb(0 0 0 / 5%);
+}
+
+.banner__title {
+    font: 400 50px/51px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.banner__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.banner__user-image-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 34px;
+    background-color: #868686;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.banner__user-image{
+    height: 56px;
+}
+
+.banner__link-to-user {
+    text-decoration: none;
+}
+
+.banner__user-name {
+    font: 400 26px / 26px Arial, Helvetica, sans-serif;
+    color: #f0f0f0;
+}
